@@ -1,6 +1,15 @@
 import json
 import joblib
 
+import pandas as pd
+
+
+def convert_dict_into_dataframe(dict_data):
+    
+    df_data = pd.DataFrame({key: [val] for key, val in dict_data.items()})
+    
+    return df_data
+
 
 def get_prediction(df):
 
@@ -20,7 +29,7 @@ def get_prediction(df):
         'payment_value_mean',
         'order_approved_at_month']
     
-    model = joblib.load('../models/v5_machine_learning.joblib')
+    model = joblib.load('../../models/v5_machine_learning.joblib')
 
     df.loc[:, 'pred'] = model.predict(df[list_selected_features])
 
@@ -42,7 +51,7 @@ def get_date_prediction(df):
 
 def get_result(json_data):
 
-    df = pd.read_json(json_data)
+    df = convert_dict_into_dataframe(json_data)
 
     df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'], format='%Y-%m-%d %H:%M:%S')
     df['time'] = pd.to_datetime(df['time'], format='%Y-%m-%d')
