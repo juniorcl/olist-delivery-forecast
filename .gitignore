@@ -160,12 +160,16 @@ cython_debug/
 #.idea/
 
 # Parquet
-/data/interim/*.parquet
-/data/raw/*.parquet
-/data/external/*.parquet
+# /data/interim/*.parquet
+# /data/raw/*.parquet
+# /data/external/*.parquet
 
 # CSV
 data/raw/*.csv
 
 # catboost
 notebooks/catboost_info
+
+# Mysql Database
+db/mysqldb
+
