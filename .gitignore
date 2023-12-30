@@ -173,3 +173,6 @@ notebooks/catboost_info
 # Mysql Database
 db/mysqldb
 
+# .joblib
+*.joblib
+
