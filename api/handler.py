@@ -6,6 +6,7 @@ from predict_model  import get_result
 
 app = Flask(__name__)
 
+
 @app.route('/predict', methods=['POST'])
 def predict():
     
@@ -17,4 +18,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    app.run(port=8000, debug=True)

@@ -29,7 +29,7 @@ def get_prediction(df):
         'payment_value_mean',
         'order_approved_at_month']
     
-    model = joblib.load('../../models/v5_machine_learning.joblib')
+    model = joblib.load('../models/machine_learning_model_from_5.0_api_development.joblib')
 
     df.loc[:, 'pred'] = model.predict(df[list_selected_features])
 
