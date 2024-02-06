@@ -1,10 +1,15 @@
 import pandas as pd
 
 from flask          import Flask, request
-from predict_model  import get_result
+from api.predict_model  import get_result
 
 
 app = Flask(__name__)
+
+@app.route('/test')
+def test():
+
+    return "API working!"
 
 
 @app.route('/predict', methods=['POST'])
