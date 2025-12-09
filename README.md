@@ -24,9 +24,11 @@ It is assumed that the available data contains enough variability and historical
 
 My solution to solve this problem will be the development of a data science project. This project will have a machine learning model capable of more accurately predicting the delivery date.
 
+> A database was created using Docker. This database was populated with data to be accessed using the SQL language, in order to simulate accessing data from a real database. Below I will describe about all process to develop the machine learning model.
+
 **Step 01. Variable Book's creation** 
 
-
+This process 
 
 
 
